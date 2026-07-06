@@ -26,53 +26,6 @@ Results:
 4. ...
 ```
 
----
-
-## Project Structure
-
-```
-├── data/                  # Kaggle Movies Dataset
-├── chroma/                # ChromaDB vector store (auto-generated)
-├── createdb.py            # Ingests and embeds movie data into ChromaDB
-├── query.py               # Interactive recommendation interface
-├── .env                   # API key (not committed)
-├── .gitignore
-└── requirements.txt
-```
-
----
-
-## Setup
-
-**1. Clone the repository and create a virtual environment**
-```bash
-python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Mac/Linux
-```
-
-**2. Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-**3. Add your OpenAI API key to `.env`**
-```
-OPENAI_API_KEY=your-key-here
-```
-
-**4. Build the vector store**
-```bash
-python ingest.py
-```
-
-**5. Run CineMatch**
-```bash
-python search.py
-```
-
----
-
 ## Tech Stack
 
 | Tool | Purpose |
@@ -80,7 +33,6 @@ python search.py
 | Python | Core language |
 | LangChain | Document loading, chunking, prompt orchestration |
 | ChromaDB | Vector store and similarity search |
-| OpenAI Embeddings | Query and document vectorisation |
 | Kaggle Movies Dataset | Movie metadata source |
 | python-dotenv | API key management |
 
